@@ -1,0 +1,11 @@
+<!--index.wxml-->
+
+<modal hidden="{{hiddenmodalput}}" title="请输入房间号" confirm-text="提交" cancel-text="返回" bindcancel="cancel" bindconfirm="confirm">
+    <input bindinput = "modalinput" type='text'placeholder="请输入内容" auto-focus/>
+</modal>
+
+
+
+<view class="container" hidden="{{!hiddenmodalput}}">
+<view>房间号：{{roomId}}</view>
+</view>

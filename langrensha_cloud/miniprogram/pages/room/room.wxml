@@ -1,0 +1,419 @@
+<!--index.wxml-->
+
+<view class="container">
+<view>房间号：{{roomId}}</view>
+</view>
+
+<view class="container">
+<view>玩家数：{{numPlayer}}</view>
+</view>
+
+<view class="container">
+<view class=".layout_horizontal"> 
+
+<view class="userinfo" hidden="{{hidden[0]}}">
+<block wx:if="{{hidden[0] || !seatTaken[0]}}" hidden="{{hidden[0]}}">
+<view class=".avatar_cover" id="0" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">1.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[0].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">1. {{seatTaken[0].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[1]}}">
+<block wx:if="{{hidden[1] ||!seatTaken[1]}}" hidden="{{hidden[1]}}">
+<view class=".avatar_cover" id="1" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">2.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[1].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">2. {{seatTaken[1].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[2]}}">
+<block wx:if="{{hidden[2] ||!seatTaken[2]}}" hidden="{{hidden[2]}}">
+<view class=".avatar_cover" id="2" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">3.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[2].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">3. {{seatTaken[2].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[3]}}">
+<block wx:if="{{hidden[3] ||!seatTaken[3]}}" hidden="{{hidden[3]}}">
+<view class=".avatar_cover" id="3" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">4.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[3].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">4. {{seatTaken[3].nickName}}</text>
+</block>
+</view>
+
+ </view>
+ </view>
+
+<view class="container">
+<view class=".layout_horizontal"> 
+
+<view class="userinfo" hidden="{{hidden[4]}}">
+<block wx:if="{{hidden[4] || !seatTaken[4]}}" hidden="{{hidden[4]}}">
+<view class=".avatar_cover" id="4" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">5.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[4].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">5. {{seatTaken[4].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[5]}}">
+<block wx:if="{{hidden[5] ||!seatTaken[5]}}" hidden="{{hidden[5]}}">
+<view class=".avatar_cover" id="5" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">6.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[5].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">6. {{seatTaken[5].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[6]}}">
+<block wx:if="{{hidden[6] ||!seatTaken[6]}}" hidden="{{hidden[6]}}">
+<view class=".avatar_cover" id="6" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">7.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[6].avatarUrl}}" mode="cover"></image>
+
+<text class="userinfo-nickname">7. {{seatTaken[6].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[7]}}">
+<block wx:if="{{hidden[7]||!seatTaken[7]}}" hidden="{{hidden[7]}}">
+<view class=".avatar_cover" id="7" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">8.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[7].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">8. {{seatTaken[7].nickName}}</text>
+</block>
+</view>
+
+ </view>
+ </view>
+
+<view class="container">
+<view class=".layout_horizontal"> 
+
+<view class="userinfo" hidden="{{hidden[8]}}">
+<block wx:if="{{hidden[8]|| !seatTaken[8]}}" hidden="{{hidden[8]}}">
+<view class=".avatar_cover" id="8" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">9.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[8].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">9. {{seatTaken[8].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[9]}}">
+<block wx:if="{{hidden[9] ||!seatTaken[9]}}" hidden="{{hidden[9]}}">
+<view class=".avatar_cover" id="9" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">10.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[9].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">10. {{seatTaken[9].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[10]}}">
+<block wx:if="{{hidden[10] ||!seatTaken[10]}}" hidden="{{hidden[10]}}">
+<view class=".avatar_cover" id="10" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">11.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[10].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">11. {{seatTaken[10].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[11]}}">
+<block wx:if="{{hidden[11]||!seatTaken[11]}}" hidden="{{hidden[11]}}">
+<view class=".avatar_cover" id="11" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">12.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[11].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">12. {{seatTaken[11].nickName}}</text>
+</block>
+</view>
+
+ </view>
+ </view>
+
+<view class="container">
+<view class=".layout_horizontal"> 
+
+<view class="userinfo" hidden="{{hidden[12.]}}">
+<block wx:if="{{hidden[12] || !seatTaken[12]}}" hidden="{{hidden[12]}}">
+<view class=".avatar_cover" id="12" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">13. </text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[12].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">13. {{seatTaken[12].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[13]}}">
+<block wx:if="{{hidden[13] ||!seatTaken[13]}}" hidden="{{hidden[13]}}">
+<view class=".avatar_cover" id="13" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">14.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[13].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">14. {{seatTaken[13].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[14]}}">
+<block wx:if="{{hidden[14] ||!seatTaken[14]}}">
+<view class=".avatar_cover" id="14" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">15.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[14].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">15. {{seatTaken[14].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[15]}}">
+<block wx:if="{{hidden[15] ||!seatTaken[15]}}">
+<view class=".avatar_cover" id="15" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">16.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[15].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">16. {{seatTaken[15].nickName}}</text>
+</block>
+</view>
+
+ </view>
+ </view>
+
+<view class="container">
+<view class=".layout_horizontal"> 
+
+<view class="userinfo" hidden="{{hidden[16]}}">
+<block wx:if="{{hidden[16] || !seatTaken[16]}}">
+<view class=".avatar_cover" id="16" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">17.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[16].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">17. {{seatTaken[16].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[17]}}">
+<block wx:if="{{hidden[17] ||!seatTaken[17]}}">
+<view class=".avatar_cover" id="17" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">18.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[17].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">18. {{seatTaken[17].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[18]}}">
+<block wx:if="{{hidden[18] ||!seatTaken[18]}}">
+<view class=".avatar_cover" id="18" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">19.</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[18].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">19. {{seatTaken[18].nickName}}</text>
+</block>
+</view>
+
+<view class="userinfo" hidden="{{hidden[19]}}">
+<block wx:if="{{hidden[19] ||!seatTaken[19]}}">
+<view class=".avatar_cover" id="19" bindtap="onTapSeat" hover-class='wsui-btn__hover_list' hover-stay-time="100"></view>
+<text class="userinfo-nickname">20. {{hidden[19]}}</text>
+</block>
+<block wx:else>
+<image class="userinfo-avatar" src="{{seatTaken[19].avatarUrl}}" mode="cover"></image>
+<text class="userinfo-nickname">20. {{seatTaken[19].nickName}}</text>
+</block>
+</view>
+
+ </view>
+ </view>
+
+<view class="container">
+<view class=".layout_horizontal"> 
+<view class="container">
+  <view class='_room' bindtap='checkMyRole' hover-class='wsui-btn__hover_list' hover-stay-time="100">
+    <view class=".text">查看身份</view>
+  </view>
+</view>
+
+<view class="container">
+  <view class='_room' bindtap='gameStart' hover-class='wsui-btn__hover_list' hover-stay-time="100">
+    <view class=".text">开始游戏</view>
+  </view>
+</view>
+
+<view class="container">
+  <view class='_room' bindtap='useSkill' hover-class='wsui-btn__hover_list' hover-stay-time="100">
+    <view class=".text">使用技能</view>
+  </view>
+</view>
+
+<view class="container">
+  <view class='_room' bindtap='onClickShuffleRole' hover-class='wsui-btn__hover_list' hover-stay-time="100">
+    <view class=".text">重新发牌</view>
+  </view>
+</view>
+</view>
+</view>
+
+<modal hidden="{{hiddenmodalput_yuYanJia}}" title="预言家请使用技能" confirm-text="确定" cancel-text="取消" bindcancel="cancel_yuYanJia" bindconfirm="confirm_yuYanJia">
+
+<input bindinput='numberSkillAt' type='number' placeholder="请输入要查验的号码..." auto-focus/>
+
+</modal>
+
+
+<modal hidden="{{hiddenmodalput_lang}}" title="狼请杀人，空刀请输入0" confirm-text="确定" cancel-text="取消" bindcancel="cancel_lang" bindconfirm="confirm_lang">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要下刀的号码..." auto-focus/>
+
+</modal>
+
+
+<modal wx:if="{{dead.langKill != null && dead.langKill != -1}}" hidden="{{hiddenmodalput_nvWu_save}}" title="女巫今天{{dead.langKill+1}}号被刀" confirm-text="救" cancel-text="不救" bindcancel="cancel_nvWu_save" bindconfirm="confirm_nvWu_save">
+</modal>
+<modal wx:else hidden="{{hiddenmodalput_nvWu_save}}" title="今天没有人被杀" confirm-text="救" cancel-text="不救" bindcancel="cancel_nvWu_save" bindconfirm="confirm_nvWu_save">
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_nvWu_kill}}" title="女巫毒人，不毒请输入0" confirm-text="确定" cancel-text="取消" bindcancel="cancel_nvWu_kill" bindconfirm="confirm_nvWu_kill">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要下毒的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_shouWei}}" title="守卫请守护，空守请输入0" confirm-text="确定" cancel-text="取消" bindcancel="cancel_shouWei" bindconfirm="confirm_shouWei">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要守护的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_huLi}}" title="狐狸请使用技能" confirm-text="确定" cancel-text="取消" bindcancel="cancel_huLi" bindconfirm="confirm_huLi">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要查验的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_wuYa}}" title="乌鸦请诽谤，不诽谤请输入0" confirm-text="确定" cancel-text="取消" bindcancel="cancel_wuYa" bindconfirm="confirm_wuYa">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入你要诽谤的人的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_jinYanZhangLao}}" title="禁言长老请诽谤，不禁言请输入0" confirm-text="确定" cancel-text="取消" bindcancel="cancel_jinYanZhangLao" bindconfirm="confirm_jinYanZhangLao">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入你要禁言的人的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_tongLingShi}}" title="通灵师请使用技能" confirm-text="确定" cancel-text="取消" bindcancel="cancel_tongLingShi" bindconfirm="confirm_tongLingShi">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要查验的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_eMo}}" title="恶魔请使用技能" confirm-text="确定" cancel-text="取消" bindcancel="cancel_eMo" bindconfirm="confirm_eMo">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要查验的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_langMeiRen}}" title="狼美人请睡觉" confirm-text="确定" cancel-text="取消" bindcancel="cancel_langMeiRen" bindconfirm="confirm_langMeiRen">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要睡觉的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_shiXiangGui}}" title="石像鬼请使用技能" confirm-text="确定" cancel-text="取消" bindcancel="cancel_shiXiangGui" bindconfirm="confirm_shiXiangGui">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要查验的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_heiBianFu}}" title="黑蝙蝠请使用技能，不庇护请输入0" confirm-text="确定" cancel-text="取消" bindcancel="cancel_heiBianFu" bindconfirm="confirm_heiBianFu">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要庇护的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_huXian}}" title="狐仙请使用技能" confirm-text="确定" cancel-text="取消" bindcancel="cancel_huXian" bindconfirm="confirm_huXian">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要标记的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_jiXieLang}}" title="机械狼请使用技能，此夜不学习请输入0" confirm-text="确定" cancel-text="取消" bindcancel="cancel_jiXieLang" bindconfirm="confirm_jiXieLang">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入要学习的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_daoZei}}" title="盗贼请选择角色" confirm-text="{{nameChinese[roleOrder[numPlayer].roleName]}}" cancel-text="{{nameChinese[roleOrder[numPlayer+1].roleName]}}" bindcancel="cancel_daoZei" bindconfirm="confirm_daoZei">
+</modal>
+
+<modal hidden="{{hiddenmodalput_qiuBiTe}}" title="丘比特请使用技能" confirm-text="确定" cancel-text="取消" bindcancel="cancel_qiuBiTe" bindconfirm="confirm_qiuBiTe">
+
+<input bindinput='couple1' type='text' placeholder="请输入情侣1的号码..." auto-focus/>
+<input bindinput='couple2' type='text' placeholder="请输入情侣2的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_couple}}" title="{{dead.couple[0]+1}}与{{dead.couple[1]+1}}被连在一起了" confirm-text="确定" cancel-text="取消" bindcancel="cancel_couple" bindconfirm="confirm_couple">
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_yeHaiZi}}" title="野孩子请使用技能" confirm-text="确定" cancel-text="取消" bindcancel="cancel_yeHaiZi" bindconfirm="confirm_yeHaiZi">
+
+<input bindinput='numberSkillAt' type='text' placeholder="请输入你爹的号码..." auto-focus/>
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_jiuWeiYaoHu}}" title="九尾妖狐你还剩{{tailsLeft}}条尾巴" confirm-text="确定" cancel-text="取消" bindcancel="cancel_jiuWeiYaoHu" bindconfirm="confirm_jiuWeiYaoHu">
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_jingZhang}}" title="现在进行警长竞选" confirm-text="查看昨夜信息" bindconfirm="confirm_jingZhang">
+
+</modal>
+
+<modal hidden="{{hiddenmodalput_message}}" title="昨夜信息" confirm-text="确定" bindconfirm="confirm_message">
+<view>{{message}}</view>
+</modal>
+
+<modal hidden="{{hiddenmodalput_moShuShi}}" title="魔术师请使用技能，不使用请输入两个0" confirm-text="确定" cancel-text="取消" bindcancel="cancel_moShuShi" bindconfirm="confirm_moShuShi">
+
+<input bindinput='moShuShi1' type='text' placeholder="请输入号码1..." auto-focus/>
+<input bindinput='moShuShi2' type='text' placeholder="请输入号码2..." auto-focus/>
+
+</modal>

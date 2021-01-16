@@ -1,0 +1,224 @@
+<!--index.wxml-->
+
+
+<view>好人阵营</view>
+
+<view class=".layout_horizontal"> 
+  <view class="{{button.yuYanJia}}" id="yuYanJia" bindtap="changeRoleStatus" >
+    <view>
+      预言家
+    </view>
+  </view>
+  <view class="{{button.nvWu}}" id="nvWu" bindtap="changeRoleStatus" >
+    <view>
+      女巫
+    </view>
+  </view>
+
+  <view class="{{button.shouWei}}" id="shouWei" bindtap="changeRoleStatus" >
+    <view>
+      守卫
+    </view>
+  </view>
+
+  <view class="{{button.baiChi}}" id="baiChi" bindtap="changeRoleStatus" >
+    <view>
+      白痴
+    </view>
+  </view>
+
+  <view class="{{button.qianXingZhe}}" id="qianXingZhe" bindtap="changeRoleStatus" >
+    <view>
+      潜行者
+    </view>
+  </view>
+ </view>
+
+ <view class=".layout_horizontal"> 
+  <view class="{{button.moShuShi}}" id="moShuShi" bindtap="changeRoleStatus" >
+    <view>
+      魔术师
+    </view>
+  </view>
+  <view class="{{button.qiShi}}" id="qiShi" bindtap="changeRoleStatus" >    <view>
+      骑士
+    </view>
+  </view>
+
+  <view class="{{button.sheMengRen}}" id="sheMengRen" bindtap="changeRoleStatus" >    <view>
+      摄梦人
+    </view>
+  </view>
+
+  <view class="{{button.huLi}}" id="huLi" bindtap="changeRoleStatus" >    <view>
+      狐狸
+    </view>
+  </view>
+
+  <view class="{{button.wuYa}}" id="wuYa" bindtap="changeRoleStatus" >    <view>
+      乌鸦
+    </view>
+  </view>
+</view>
+
+<view class=".layout_horizontal"> 
+  <view class="{{button.xiong}}" id="xiong" bindtap="changeRoleStatus" >    <view>
+      熊
+    </view>
+  </view>
+  <view class="{{button.jinYanZhangLao}}" id="jinYanZhangLao" bindtap="changeRoleStatus" >    <view>
+      禁言长老
+    </view>
+  </view>
+
+  <view class="{{button.jiuWeiYaoHu}}" id="jiuWeiYaoHu" bindtap="changeRoleStatus" >    <view>
+      九尾妖狐
+    </view>
+  </view>
+
+  <view class="{{button.tongLingShi}}" id="tongLingShi" bindtap="changeRoleStatus" >    <view>
+      通灵师
+    </view>
+  </view>
+
+  <view class="{{button.shouMuRen}}" id="shouMuRen" bindtap="changeRoleStatus" >    <view>
+      守墓人
+    </view>
+  </view>
+</view>
+
+<view class=".container">
+
+  <view class=".layout_horizontal"> 
+    <view class=".container_border">猎人</view>
+    <view class=".container_border">
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{button.lieRen}}" bindtap="bindMinus" id="lieRen">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{role.lieRen}}" id="lieRen"/>
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus" id="lieRen">+</text>
+      </view>
+    </view>
+  </view>
+
+    <view class=".layout_horizontal"> 
+    <view class=".container_border">村民</view>
+    <view class=".container_border">
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{button.pingMin}}" bindtap="bindMinus" id="pingMin">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{role.pingMin}}" id="pingMin"/>
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus" id="pingMin">+</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view>狼人阵营</view>
+<view class=".layout_horizontal"> 
+  <view class="{{button.langQiang}}" id="langQiang" bindtap="changeRoleStatus" >
+    <view>
+      狼枪
+    </view>
+  </view>
+  <view class="{{button.yinLang}}" id="yinLang" bindtap="changeRoleStatus" >
+    <view>
+      隐狼
+    </view>
+  </view>
+
+  <view class="{{button.eMo}}" id="eMo" bindtap="changeRoleStatus" >
+    <view>
+      恶魔
+    </view>
+  </view>
+
+  <view class="{{button.langMeiRen}}" id="langMeiRen" bindtap="changeRoleStatus" >
+    <view>
+      狼美人
+    </view>
+  </view>
+
+  <view class="{{button.eLingQiShi}}" id="eLingQiShi" bindtap="changeRoleStatus" >
+    <view>
+      恶灵骑士
+    </view>
+  </view>
+ </view>
+
+ <view class=".layout_horizontal"> 
+  <view class="{{button.shiXiangGui}}" id="shiXiangGui" bindtap="changeRoleStatus" >
+    <view>
+      石像鬼
+    </view>
+  </view>
+  <view class="{{button.heiBianFu}}" id="heiBianFu" bindtap="changeRoleStatus" >
+    <view>
+      黑蝙蝠
+    </view>
+  </view>
+
+  <view class="{{button.huXian}}" id="huXian" bindtap="changeRoleStatus" >
+    <view>
+      狐仙
+    </view>
+  </view>
+
+  <view class="{{button.jiXieLang}}" id="jiXieLang" bindtap="changeRoleStatus" >
+    <view>
+      机械狼
+    </view>
+  </view>
+
+ </view>
+
+<view class=".container">
+
+  <view class=".layout_horizontal"> 
+    <view class=".container_border">狼人</view>
+    <view class=".container_border">
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{button.lang}}" bindtap="bindMinus" id="lang">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{role.lang}}" id="lang"/>
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus" id="lang">+</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view>第三阵营</view>
+
+<view class=".layout_horizontal"> 
+  <view class="{{button.qiuBiTe}}" id="qiuBiTe" bindtap="changeRoleStatus" >
+    <view>
+      丘比特
+    </view>
+  </view>
+  <view class="{{button.daoZei}}" id="daoZei" bindtap="changeRoleStatus" >
+    <view>
+      盗贼
+    </view>
+  </view>
+
+  <view class="{{button.yeHaiZi}}" id="yeHaiZi" bindtap="changeRoleStatus" >
+    <view>
+      野孩子
+    </view>
+  </view>
+ </view>
+
+ <view class=".container">
+
+ </view>
+
+ <view class="container">
+  <view class='_room' bindtap='createRoom'>
+    <view class=".text">创建房间</view>
+  </view>
+</view>
