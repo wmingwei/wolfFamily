@@ -272,13 +272,25 @@ Page({
       this.data.role["couple"] = true
     }
     roleOrder = shuffle(roleOrder)
-    while (this.data.role["daoZei"] && roleOrder[numPlayer]["roleName"]==="lang" && roleOrder[numPlayer+1]["roleName"]=="lang"){
+    while (this.data.role["daoZei"] && isDaoZeiIllegal(roleOrder)){
       roleOrder = shuffle(roleOrder)
     }
     const db = wx.cloud.database()
     this.createEmptyRoom(db, numPlayer, roleOrder)
   },
 })
+
+function isDaoZeiIllegal(roleOrder) {
+  remainingCards = roleOrder.slice(-2)
+  if (remainingCards[0]["roleName"] === "lang" && (remainingCards[1]["roleName"] === "lang" || remainingCards[1]["roleName"] === "daoZei")) {
+    return true
+  }
+  if (remainingCards[0]["roleName"] === "daoZei" && remainingCards[1]["roleName"] === "lang") {
+    return true
+  }
+  return false
+}
+
 function shuffle(a) {
   var j, x, i;
   for (i = a.length - 1; i > 0; i--) {
